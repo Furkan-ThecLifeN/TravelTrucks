@@ -1,0 +1,127 @@
+.card {
+  border: 1px solid #10182833; 
+  border-radius: 20px;
+  padding: 24px;
+  display: flex;
+  gap: 24px;
+  background-color: #fff;
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.image {
+  width: 290px;
+  height: 310px;
+  object-fit: cover;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #101828;
+  margin: 0; 
+}
+
+.priceSection {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.price {
+  font-size: 24px;
+  font-weight: 600;
+  color: #101828;
+}
+
+.favButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  transition: transform 0.2s;
+}
+
+.favButton:active {
+  transform: scale(1.2);
+}
+
+.ratingLocation {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 16px;
+  color: #475467;
+  margin-bottom: 24px;
+}
+
+.description {
+  color: #475467;
+  font-size: 16px;
+  line-height: 24px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 500px; 
+  margin-bottom: 24px;
+}
+
+.categories {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.categoryBadge {
+  background: #F2F4F7;
+  padding: 12px 18px;
+  border-radius: 100px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #101828;
+}
+
+.showMoreBtn {
+  display: inline-block;
+  padding: 16px 40px;
+  background-color: #E44848;
+  color: white;
+  text-decoration: none;
+  border-radius: 200px;
+  font-weight: 500;
+  transition: background-color 0.3s;
+  align-self: flex-start; 
+}
+
+.showMoreBtn:hover {
+  background-color: #D84343;
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+  }
+  .image {
+    width: 100%;
+    height: 250px;
+  }
+}

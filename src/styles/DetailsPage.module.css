@@ -1,0 +1,169 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: 'Inter', sans-serif;
+  color: #101828;
+}
+
+.header {
+  margin-bottom: 24px;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.ratingLocation {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 16px;
+  color: #475467;
+  margin-bottom: 16px;
+}
+
+.price {
+  font-size: 28px;
+  font-weight: 600;
+  color: #E44848; 
+}
+
+.gallery {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  margin-bottom: 40px;
+  scrollbar-width: thin; 
+}
+
+.gallery img {
+  width: 290px;
+  height: 310px;
+  object-fit: cover;
+  border-radius: 20px;
+  flex-shrink: 0;
+}
+
+.contentWrapper {
+  display: flex;
+  gap: 64px;
+  align-items: flex-start;
+}
+
+.infoColumn {
+  flex: 1;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #475467;
+  margin-bottom: 40px;
+}
+
+.featuresSection {
+  margin-bottom: 40px;
+}
+
+.sectionTitle {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 15px;
+}
+
+.featureList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  list-style: none;
+  padding: 0;
+}
+
+.featureBadge {
+  background-color: #F2F4F7;
+  padding: 12px 18px;
+  border-radius: 100px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #101828;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.formColumn {
+  width: 448px;
+  border: 1px solid #10182833;
+  padding: 32px;
+  border-radius: 20px;
+  position: sticky;
+  top: 40px; 
+}
+
+.formTitle {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.formSubtitle {
+  color: #475467;
+  margin-bottom: 24px;
+}
+
+.reviewsSection {
+  margin-top: 40px;
+}
+
+.reviewItem {
+  margin-bottom: 24px;
+  border-bottom: 1px solid #EAECF0;
+  padding-bottom: 24px;
+}
+
+.reviewerHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  background-color: #F2F4F7;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  color: #E44848;
+  font-size: 20px;
+}
+
+.reviewerName {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.stars {
+  color: #FFC531; 
+}
+
+/* Mobil Uyumluluk */
+@media (max-width: 900px) {
+  .contentWrapper {
+    flex-direction: column;
+  }
+  
+  .formColumn {
+    width: 100%;
+    position: static;
+  }
+}
