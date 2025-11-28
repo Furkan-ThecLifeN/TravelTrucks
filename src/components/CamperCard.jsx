@@ -2,16 +2,26 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { toggleFavorite } from '../redux/campersSlice';
 import styles from '../styles/CamperCard.module.css';
+
 const CamperCard = ({ camper }) => {
   const dispatch = useDispatch();
   const favorites = useSelector(state => state.campers.favorites);
   
   const isFav = favorites.some(fav => fav.id === camper.id);
 
+  // --- DÜZELTME BURADA BAŞLIYOR ---
+  // Galerinin ilk elemanını alıyoruz
+  const firstImage = camper.gallery?.[0];
+  
+  // Eğer gelen veri bir 'object' ise (örn: {original: "url"}), .original key'ini kullan.
+  // Eğer direkt 'string' ise kendisini kullan.
+  const imageUrl = typeof firstImage === 'object' ? firstImage.original : firstImage;
+  // --- DÜZELTME BURADA BİTİYOR ---
+
   return (
     <div className={styles.card}>
       <img 
-        src={camper.gallery?.[0]} 
+        src={imageUrl} // Düzelttiğimiz değişkeni buraya veriyoruz
         alt={camper.name} 
         className={styles.image} 
       />
@@ -68,6 +78,8 @@ const CamperCard = ({ camper }) => {
         <Link 
             to={`/catalog/${camper.id}`} 
             className={styles.showMoreBtn}
+            target="_blank" 
+            rel="noopener noreferrer"
         >
             Show more
         </Link>
